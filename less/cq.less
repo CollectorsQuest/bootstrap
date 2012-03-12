@@ -1,3 +1,5 @@
+@import "variables.less";
+
 //  Fidex width of wapper to 1200px
 @media (min-width: 1200px) {
 .container-fluid {
@@ -23,15 +25,30 @@
 // TOP INTERCTIVE CONTAINER
 
 
-//WAPPER, COLUMNS
+//WRAPPER, COLUMNS
+.r-column-padding {
+	padding-right: 320px + @fluidGridGutterWidth;
+}
 .fixed-right-column {
 	float: left;
-	margin-left: 0;
-	margin-right: -300px;
+	margin-left: @fluidGridGutterWidth;
+	margin-right: -320px - @fluidGridGutterWidth;
 	position: relative;
 	width: 300px;
 }
 
+@media screen and ( max-width: 760px ) {
+.fixed-right-column {
+	display: block;
+	float: none;
+	padding: 0;
+	margin: 0;
+	width: 100% !important;
+}
+.r-column-padding {
+	padding-right: 0;
+}
+}
 
 
 // FOOTER
