@@ -359,6 +359,10 @@
   <div class="row">
     <div class="span8">
       <table class="table table-bordered table-striped">
+        <colgroup>
+          <col class="span1">
+          <col class="span7">
+        </colgroup>
         <thead>
           <tr>
             <th>{{_i}}Tag{{/i}}</th>
@@ -1107,8 +1111,7 @@
             <label class="control-label" for="prependedInput">{{_i}}Prepended text{{/i}}</label>
             <div class="controls">
               <div class="input-prepend">
-                <span class="add-on">@</span>
-                <input class="span2" id="prependedInput" size="16" type="text">
+                <span class="add-on">@</span><input class="span2" id="prependedInput" size="16" type="text">
               </div>
               <p class="help-block">{{_i}}Here's some help text{{/i}}</p>
             </div>
@@ -1117,10 +1120,25 @@
             <label class="control-label" for="appendedInput">{{_i}}Appended text{{/i}}</label>
             <div class="controls">
               <div class="input-append">
-                <input class="span2" id="appendedInput" size="16" type="text">
-                <span class="add-on">.00</span>
+                <input class="span2" id="appendedInput" size="16" type="text"><span class="add-on">.00</span>
               </div>
-              <p class="help-block">{{_i}}Here's more help text{{/i}}</p>
+              <span class="help-inline">{{_i}}Here's more help text{{/i}}</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedPrependedInput">{{_i}}Append and prepend{{/i}}</label>
+            <div class="controls">
+              <div class="input-prepend input-append">
+                <span class="add-on">$</span><input class="span2" id="appendedPrependedInput" size="16" type="text"><span class="add-on">.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedPrependedInput">{{_i}}Append with button{{/i}}</label>
+            <div class="controls">
+              <div class="input-append">
+                <input class="span2" id="appendedPrependedInput" size="16" type="text"><button class="btn" type="button">Go!</button>
+              </div>
             </div>
           </div>
           <div class="control-group">
@@ -1204,44 +1222,44 @@
     <thead>
       <tr>
         <th>{{_i}}Button{{/i}}</th>
-        <th>{{_i}}Class{{/i}}</th>
+        <th>{{_i}}class=""{{/i}}</th>
         <th>{{_i}}Description{{/i}}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><button class="btn" href="#">{{_i}}Default{{/i}}</button></td>
-        <td><code>.btn</code></td>
+        <td><code>btn</code></td>
         <td>{{_i}}Standard gray button with gradient{{/i}}</td>
       </tr>
       <tr>
         <td><button class="btn btn-primary" href="#">{{_i}}Primary{{/i}}</button></td>
-        <td><code>.btn-primary</code></td>
+        <td><code>btn btn-primary</code></td>
         <td>{{_i}}Provides extra visual weight and identifies the primary action in a set of buttons{{/i}}</td>
       </tr>
       <tr>
         <td><button class="btn btn-info" href="#">{{_i}}Info{{/i}}</button></td>
-        <td><code>.btn-info</code></td>
+        <td><code>btn btn-info</code></td>
         <td>{{_i}}Used as an alternate to the default styles{{/i}}</td>
       </tr>
       <tr>
         <td><button class="btn btn-success" href="#">{{_i}}Success{{/i}}</button></td>
-        <td><code>.btn-success</code></td>
+        <td><code>btn btn-success</code></td>
         <td>{{_i}}Indicates a successful or positive action{{/i}}</td>
       </tr>
       <tr>
         <td><button class="btn btn-warning" href="#">{{_i}}Warning{{/i}}</button></td>
-        <td><code>.btn-warning</code></td>
+        <td><code>btn btn-warning</code></td>
         <td>{{_i}}Indicates caution should be taken with this action{{/i}}</td>
       </tr>
       <tr>
         <td><button class="btn btn-danger" href="#">{{_i}}Danger{{/i}}</button></td>
-        <td><code>.btn-danger</code></td>
+        <td><code>btn btn-danger</code></td>
         <td>{{_i}}Indicates a dangerous or potentially negative action{{/i}}</td>
       </tr>
       <tr>
         <td><button class="btn btn-inverse" href="#">{{_i}}Inverse{{/i}}</button></td>
-        <td><code>.btn-inverse</code></td>
+        <td><code>btn btn-inverse</code></td>
         <td>{{_i}}Alternate dark gray button, not tied to a semantic action or use{{/i}}</td>
       </tr>
     </tbody>
