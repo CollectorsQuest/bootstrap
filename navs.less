@@ -98,10 +98,12 @@
 .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
+
 // Make the list-items overlay the bottom border
 .nav-tabs > li {
   margin-bottom: -1px;
 }
+
 // Actual tabs (as links)
 .nav-tabs > li > a {
   padding-top: 8px;
@@ -122,7 +124,6 @@
   border-bottom-color: transparent;
   cursor: default;
 }
-
 
 // PILLS
 // -----
@@ -188,11 +189,14 @@
 // DROPDOWNS
 // ---------
 
-.nav-tabs .dropdown-menu {
-  .border-radius(0 0 5px 5px); // remove the top rounded corners here since there is a hard edge above the menu
+// Position the menu
+.nav-tabs .dropdown-menu,
+.nav-pills .dropdown-menu {
+  margin-top: 1px;
+  border-width: 1px;
 }
 .nav-pills .dropdown-menu {
-  .border-radius(4px); // make rounded corners match the pills
+  .border-radius(4px);
 }
 
 // Default dropdown links
@@ -309,10 +313,6 @@
 // ------------
 
 // Common styles
-.tabs-left .tab-content,
-.tabs-right .tab-content {
-  width: auto;
-}
 .tabs-left .nav-tabs > li,
 .tabs-right .nav-tabs > li {
   float: none;
